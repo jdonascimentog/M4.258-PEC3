@@ -1,0 +1,165 @@
+@use "sass:math";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-lg;
+    @apply font-bold;
+  }
+  h5 {
+    @apply text-lg;
+  }
+  a {
+    @apply text-dark;
+  }
+  a:hover {
+    @apply text-light;
+  }
+}
+
+.header {
+  @include theme($info-c);
+}
+
+.header__nav {
+  overflow: hidden;
+
+  .header__element {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .header__element--right {
+    float: right;
+  }
+
+  .header__element:hover {
+    background-color: color-contrast($info-c);
+    color: color-contrast(color-contrast($info-c));
+  }
+
+  .header__icon {
+    display: none;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: $mqMinWidth) {
+  .header__nav a:not(:first-child) {
+    display: none;
+  }
+  .header__nav a.header__icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: $mqMinWidth) {
+  .header__nav.responsive {
+    position: relative;
+  }
+  .header__nav.responsive .header__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header__nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.links li {
+  list-style: none;
+}
+
+.nota__imagen {
+  background: url("../images/crowd-g2b615eb72_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  padding-top: 20vh;
+  padding-left: 20%;
+  color: $light-c;
+}
+
+.nota__imagen h1 {
+  font-size: 5rem;
+}
+
+.nota__imagen h2 {
+  font-size: 3rem;
+}
+
+.nota__resumen {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.nota__dl {
+  border-top: 1px solid $secondary-c;
+  border-bottom: 1px solid $secondary-c;
+  padding: 2rem 0rem;
+  margin: 2rem;
+}
+
+.nota__dt {
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.nota__dd {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  padding-left: 3rem;
+}
+
+.nota__quote {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 5rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+@media (max-width: $mqMinWidth) {
+  .nota__imagen h1 {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .nota__imagen h2 {
+    font-size: 1rem;
+  }
+}

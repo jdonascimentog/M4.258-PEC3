@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/main.scss"
+        />
+        <!-- do not remove this line! -->
+        <title>TailWind Atomic CSS</title>
+    </head>
+    <body>
+        <include src="./views/header.html"></include>
+        <div class="my-10 mx-auto w-100 md:w-95">
+            <h1 class="font-serif text-primary font-bold mb-6">PEC3 M4.258</h1>
+            <p class="mb-6 font-sans text-justify">
+                Se han modificado la página de grupos y nota de prensa de la
+                práctica PEC2, utilizando en la medida de lo posible, TailWind y
+                su patrón de Atomic CSS.
+            </p>
+            <div class="flex space-x-4 mb-6 mt-6 text-sm font-medium">
+                <div class="flex-auto flex space-x-4">
+                    <a
+                        class="p-6 font-semibold rounded-md bg-primary text-light"
+                        type="button"
+                        href="./grupos.html"
+                    >
+                        Grupos
+                    </a>
+                    <a
+                        class="p-6 font-semibold rounded-md bg-primary text-light"
+                        type="button"
+                        href="./nota_prensa.html"
+                    >
+                        Nota de prensa
+                    </a>
+                </div>
+            </div>
+        </div>
+        <include src="./views/footer.html"></include>
+        <script type="module" src="./assets/scripts/main.js"></script>
+        <!-- do not remove this line! -->
+    </body>
+</html>
